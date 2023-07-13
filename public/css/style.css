@@ -1,63 +1,98 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.heading{
-    text-align: center;
-    font-size: 5rem;
-    color: aliceblue;
+.heading {
+	text-align: center;
+	font-size: 5rem;
+	color: aliceblue;
 }
 
-#join{
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+#join {
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
 }
 
-section{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(60deg, #020024 19%, #073294 38%, #0648a2 62%, #056ab9 74%, #00d4ff 82%, #090979 91%);
+section {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+		60deg,
+		#020024 19%,
+		#073294 38%,
+		#0648a2 62%,
+		#056ab9 74%,
+		#00d4ff 82%,
+		#090979 91%
+	);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    height: 35vh;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(119,191,137,1) 39%, rgba(174,189,99,1) 64%, rgba(183,189,93,1) 68%, rgba(253,187,45,1) 100%);
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
+	display: flex;
+	width: 50vw;
+	height: 35vh;
+	margin: auto;
+    flex-direction: row-reverse;
+	background: linear-gradient(
+		0deg,
+		rgba(34, 193, 195, 1) 0%,
+		rgba(119, 191, 137, 1) 39%,
+		rgba(174, 189, 99, 1) 64%,
+		rgba(183, 189, 93, 1) 68%,
+		rgba(253, 187, 45, 1) 100%
+	);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-#close{
-    border: 2px solid black;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+form div:first-child{
+    margin: 10px;
 }
 
-#close div:first-child{
-    background-color: red;
-    height: 3px;
-    transform: rotate(45deg);
+form div:last-child {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+form h1 {
+	text-align: center;
 }
 
-#close div:last-child{
-    background-color: red;
-    height: 3px;
-    transform: rotate(-45deg);
+#close {
+	cursor: pointer;
+	width: 20px;
+    height: auto;
 }
 
-#submit{
-    cursor: pointer;
+#submit {
+	cursor: pointer;
+	padding: 10px 30px;
+}
+
+#email {
+	padding: 10px 40px;
+	margin: 10px;
+}
+
+.blurBackground {
+	filter: blur(5px);
+}
+
+@media screen and (max-width: 768px) {
+	form {
+		width: 95vw;
+	}
 }
